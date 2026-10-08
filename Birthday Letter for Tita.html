@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday, Tita! ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            background: linear-gradient(135deg, #ffe6f0, #fff5f8);
+            font-family: Arial, sans-serif;
+            color: #444;
+            overflow-x: hidden;
+        }
+
+        .letter-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d63384;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .picture {
+            text-align: center;
+            margin: 25px 0 35px;
+        }
+
+        /* RECTANGLE PICTURE */
+        .picture img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 6px solid #f8b6cf;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .letter {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .letter p {
+            margin-bottom: 20px;
+        }
+
+        .greeting {
+            font-weight: bold;
+            color: #d63384;
+            font-size: 20px;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 35px;
+            font-size: 18px;
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        .heart {
+            text-align: center;
+            font-size: 25px;
+            margin-top: 25px;
+        }
+
+        /* FLOATING HEARTS */
+        .floating-heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 25px;
+            pointer-events: none;
+            z-index: 9999;
+            animation: floatUp 5s linear forwards;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh) scale(1.5) rotate(20deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .letter-container {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .letter {
+                font-size: 16px;
+            }
+
+            .picture img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="letter-container">
+
+        <h1>Happy Birthday, Tita! 🎂❤️</h1>
+
+        <!-- RECTANGLE PICTURE -->
+        <div class="picture">
+            <img src="birthday.jpeg" alt="Birthday Picture">
+        </div>
+
+        <div class="letter">
+
+            <p class="greeting">
+                Dear Tita,
+            </p>
+
+            <p>
+                Happy happy birthday po! 🎉❤️ Wala gyud ko kabalo kung pila na imong edad karon,
+                pero ang importante is karon nga adlaw, we get to celebrate another year of your life.
+                I hope nga this special day will be filled with happiness, love, and beautiful memories
+                with your family.
+            </p>
+
+            <p>
+                I also want to take this opportunity to thank you for being a loving and caring mother.
+                Bisan dili pa ta close or daghan pa kog wala nahibaw-an about you, makita gyud nako
+                how much you love and care for your family, especially sa imong daughter.
+            </p>
+
+            <p>
+                Thank you pud kaayo kay you raised a wonderful daughter who became someone very special
+                to me. I am truly grateful nga nakaila ko niya and that she became an important part
+                of my life. I know nga dili sayon mahimong mother, and I really appreciate all the
+                sacrifices, love, and guidance you have given her throughout the years.
+            </p>
+
+            <p>
+                As her mother, kabalo ko nga you only want what is best for her. I want you to know
+                nga I will always try my best to treat your daughter with love, respect, and sincerity.
+                Dili man ko perfect, and I still have a lot to learn, pero I promise nga I will do
+                my best to be someone nga you can trust and someone nga will always care for her🥹.
+            </p>
+
+            <p>
+                On your special day, I pray nga God will continue to bless you with good health,
+                happiness, peace, and strength. May He guide you in everything you do and continue
+                to protect you and your whole family. I hope nga daghan pa kaayong birthdays ang
+                imong ma-celebrate, surrounded by the people who love and appreciate you🤗.
+            </p>
+
+            <p>
+                Enjoy your special day, Tita! Deserve kaayo nimo nga ma-celebrate and ma-appreciate
+                because you are not only a mother, but also someone who has given so much love and
+                care to your family.
+            </p>
+
+            <p>
+                Once again, Happy Birthday po! 🫶🏻 Thank you for raising such a wonderful daughter,
+                and thank you for being part of the life of someone who means so much to me.
+            </p>
+
+            <p>
+                God bless you always, Tita, and I hope nga ma-enjoy gyud nimo imong birthday.
+                More blessings, more happiness, and more beautiful memories to come! 🥰
+            </p>
+
+            <div class="signature">
+                With love and respect,<br>
+                Your daughter's special someone ❤️
+            </div>
+
+            <div class="heart">
+                🌷💐🎂❤️🎉
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FLOATING HEART EFFECT -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+
+            heart.classList.add("floating-heart");
+            heart.innerHTML = "❤️";
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = (15 + Math.random() * 25) + "px";
+            heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 7000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+
+</body>
+</html>
+</html>
